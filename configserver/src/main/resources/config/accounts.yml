@@ -1,0 +1,11 @@
+build:
+  version: 3.0
+
+accounts:
+  message: Welcome to ChiBank accounts related local APIs
+  contactDetails:
+    name: Chi - Developer
+    email: Chi@gmail.com
+  onCallSupport:
+    - (555) 555-1234
+    - (555) 523-1345
