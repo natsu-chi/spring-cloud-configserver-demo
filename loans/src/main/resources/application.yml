@@ -20,8 +20,13 @@ spring:
 
   config:
     import:
-      - "application-qa.yml"
-      - "application-prod.yml"
+      - "optional:configserver:http://localhost:8071/"
+
+  management:
+    endpoints:
+      web:
+        exposure:
+          include: "*"
 
   profiles:
     active: qa
@@ -33,21 +38,6 @@ logging:
 
 build:
   version: 3.0
-
-accounts:
-  message: Welcome to ChiBank loans related local APIs
-  contactDetails:
-    name: Chi - Developer
-    email: Chi@gmail.com
-  onCallSupport:
-    - (555) 555-1234
-    - (555) 523-1345
-
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
 
 server:
   port: 8090

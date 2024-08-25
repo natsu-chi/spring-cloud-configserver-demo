@@ -16,6 +16,8 @@ spring:
           timeout: 5 # 配置服務器最多等待 5 秒，超時拋出異常
           clone-on-start: true
           force-pull: true
+encrypt:
+  key: "5325DBV823TJK99DGF235"
 management:
   endpoints:
     web:
