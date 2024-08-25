@@ -23,7 +23,7 @@ spring:
     endpoints:
       web:
         exposure:
-          include: "*"
+          include: refresh
 
 logging:
   level:
