@@ -26,7 +26,7 @@ public class LoansController {
 
     public LoansController(ILoansService iLoansService) { this.iLoansService = iLoansService; }
 
-    @Value("3.0")
+    @Value("${build.version}")
     private String buildVersion;
 
     @Autowired

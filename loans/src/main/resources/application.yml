@@ -1,23 +1,21 @@
 spring:
-#  application:
-#    name: loans
-
+  application:
+    name: loans
+  profiles:
+    active: prod
   datasource:
     url: jdbc:h2:mem:demodb
     driverClassName: org.h2.Driver
     username: sa
     password: ''
-
   h2:
     console:
       enabled: true
-
   jpa:
     database-platform: org.hibernate.dialect.H2Dialect
     hibernate:
       ddl-auto: update
     show-sql: true
-
   config:
     import:
       - "optional:configserver:http://localhost:8071/"
@@ -27,9 +25,6 @@ spring:
       web:
         exposure:
           include: "*"
-
-  profiles:
-    active: qa
 
 logging:
   level:
